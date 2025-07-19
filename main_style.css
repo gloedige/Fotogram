@@ -29,5 +29,7 @@ footer{
     padding: 8px 0px;
 }
 .container_footer{
-
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 8px 0px;
 }
