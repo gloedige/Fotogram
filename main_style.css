@@ -1,9 +1,11 @@
 body{
     margin: 0px;
+    background-color: black;
 }
 main{
-    background-color: black;
     flex:1;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 .wrapper{
     display: flex;
@@ -32,4 +34,16 @@ footer{
     margin: 0 auto;
     max-width: 1440px;
     padding: 8px 0px;
+}
+.overview_style{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px;
+}
+.single_imgage{
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
 }
