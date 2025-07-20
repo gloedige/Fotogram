@@ -1,4 +1,6 @@
-let myImgs = ["20250320_121941.jpg_compressed.JPEG",
+const imgContainer = document.getElementById('img_overview');
+const rootImgFolder = "./img/";
+const myImgsArray = ["20250320_121941.jpg_compressed.JPEG",
 "20241016_080836.jpg_compressed.JPEG",
 "20241026_122747.jpg_compressed.JPEG",
 "20250603_083819.jpg_compressed.JPEG",
@@ -16,3 +18,12 @@ let myImgs = ["20250320_121941.jpg_compressed.JPEG",
 "20241031_202519.jpg_compressed.JPEG",
 "20241010_182315.jpg_compressed.JPEG",
 "20241008_115304.jpg_compressed.JPEG"];
+
+function createImgOverview(){
+    for (let index = 0; index < myImgsArray.length; index++) {
+        let singleImg = myImgsArray[index];
+        let singleImgPath = rootImgFolder + singleImg;
+        imgContainer.innerHTML += `<img src= "${singleImgPath}" class="single_imgage">`
+        
+    }
+}
