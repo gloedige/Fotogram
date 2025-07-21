@@ -23,7 +23,15 @@ function createImgOverview(){
     for (let index = 0; index < myImgsArray.length; index++) {
         let singleImg = myImgsArray[index];
         let singleImgPath = rootImgFolder + singleImg;
-        imgContainer.innerHTML += `<img src= "${singleImgPath}" class="single_imgage">`
+        imgContainer.innerHTML += `<img src= "${singleImgPath}" class="single_imgage" onclick="openOverlay(${index})">`
         
     }
+}
+
+function openOverlay(index){
+    let overlayContainer = document.getElementById('overlayImg');
+    overlayContainer.classList.toggle("d_none");
+    let singleImg = myImgsArray[index];
+    let singleImgPath = rootImgFolder + singleImg;
+    overlayContainer.innerHTML = `<img src= "${singleImgPath}" class="overlay_image">`
 }
