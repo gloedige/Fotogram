@@ -21,17 +21,41 @@ const myImgsArray = ["20250320_121941.jpg_compressed.JPEG",
 
 function createImgOverview(){
     for (let index = 0; index < myImgsArray.length; index++) {
-        let singleImg = myImgsArray[index];
-        let singleImgPath = rootImgFolder + singleImg;
-        imgContainer.innerHTML += `<img src= "${singleImgPath}" class="single_imgage" onclick="openOverlay(${index})">`
-        
+        let singleImgPath = assembleImgPath(index);
+        imgContainer.innerHTML += `<img src= "${singleImgPath}" class="single_imgage" onclick="openOverlay(${index})">`; 
     }
 }
 
 function openOverlay(index){
-    let overlayContainer = document.getElementById('overlayImg');
-    overlayContainer.classList.toggle("d_none");
+    toggleDNone('overlay');
+    let overlayContainer = document.getElementById('overlay');
+    let singleImgPath = assembleImgPath(index);
+    overlayContainer.innerHTML = assembleOverlayElements(singleImgPath); 
+}
+
+function assembleOverlayElements(singleImgPath){
+    return `<div>
+                <button>
+                    close
+                </button>
+                <img src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">
+                <div>
+                    <button>
+                        backwards
+                    </button>
+                    <button>
+                        forwards
+                    </button>
+                </div>
+            </div>`;
+}
+
+function toggleDNone(id){
+    document.getElementById(id).classList.toggle("d_none");
+}
+
+function assembleImgPath(index){
     let singleImg = myImgsArray[index];
     let singleImgPath = rootImgFolder + singleImg;
-    overlayContainer.innerHTML = `<img src= "${singleImgPath}" class="overlay_image">`
+    return singleImgPath;
 }
