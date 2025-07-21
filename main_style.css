@@ -24,7 +24,8 @@ header{
 footer{
     background-color: #151B23;
     height: 80px;
-
+    display: flex;
+    align-items: center;
 }
 .container_header{
     margin: 0 auto;
@@ -43,6 +44,12 @@ h1{
     font-size: 70px;
     font-weight: 800;
 }
+p{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin: 0 auto;
+}
 @font-face {
     font-family: figtree;
     src: url("./Font/Figtree-VariableFont_wght.ttf");
@@ -58,5 +65,10 @@ h1{
 .single_imgage{
     height: 200px;
     width: 200px;
+    transition: transform .2s;
     border-radius: 10%;
+    cursor: pointer;
+}
+.single_imgage:hover{
+    transform: scale(1.1);
 }
