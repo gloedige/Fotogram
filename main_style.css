@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     background-color: black;
+    font-family: jua;
 }
 main{
     flex:1;
@@ -35,12 +36,24 @@ footer{
     max-width: 1440px;
     padding: 8px 0px;
 }
+h1{
+    color: white;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 70px;
+    font-weight: 100;
+}
+@font-face {
+    font-family: jua;
+    src: url("./Font/Jua-Regular.ttf");
+    font-display: fallback;
+}
 .overview_style{
     flex-wrap: wrap;
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin: 50px;
+    margin: 60px;
 }
 .single_imgage{
     height: 200px;
