@@ -1,5 +1,77 @@
+body{
+    margin: 0px;
+    background-color: black;
+    font-family: figtree;
+}
+main{
+    flex-direction: column;
+    display: flex;
+    flex:1;
+    margin: 0 auto;
+    max-width: 1440px;
+}
 .wrapper{
     display: flex;
     flex-direction: column;
     height: 100vh;
+}
+header{
+    background-color: #151B23;
+    height: 80px;
+}
+.logo_img{
+    height: 64px;
+    margin-left: 16px;
+}
+footer{
+    background-color: #151B23;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+.container_header{
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 8px 0px;
+}
+.container_footer{
+    margin: 0 auto;
+    max-width: 1440px;
+    padding: 8px 0px;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin: 80px 60px;
+    font-size: 50px;
+    font-weight: 800;
+}
+p{
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin: 0 auto;
+}
+@font-face {
+    font-family: figtree;
+    src: url("./Font/Figtree-VariableFont_wght.ttf");
+    font-display: fallback;
+}
+.overview_style{
+    flex-wrap: wrap;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 0px 60px;
+    margin-bottom: 60px;
+}
+.single_imgage{
+    height: 150px;
+    width: 150px;
+    transition: transform .2s;
+    border-radius: 10%;
+    cursor: pointer;
+}
+.single_imgage:hover{
+    transform: scale(1.1);
 }

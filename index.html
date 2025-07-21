@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fotogram</title>
-    <link rel="icon" type="image/png" href="./img/favicon.png">
+    <link rel="icon" type="image/png" href="./logo_img/favicon.svg">
     <link rel="stylesheet" href="main_style.css">
 </head>
-<body>
+<body onload="createImgOverview()">
     <div class="wrapper">
         <header>
-
+            <div class="container_header">
+                <img src="./logo_img/Fotogram_Logo.svg" alt="logo image" class="logo_img">
+                
+            </div>
+            
         </header>
         <main>
-
+            <h1>Your personal photo album</h1>
+            <div class="overview_style" id="img_overview"></div>
         </main>
         <footer>
-
+            <div class="container_footer">
+                <p>photos by &copy; Gerd Lödige</p>
+            </div>
+            
         </footer>
     </div>
     
 </body>
+<script src="script.js"></script>
 </html>
