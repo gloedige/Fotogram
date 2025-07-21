@@ -4,6 +4,8 @@ body{
     font-family: figtree;
 }
 main{
+    flex-direction: column;
+    display: flex;
     flex:1;
     margin: 0 auto;
     max-width: 1440px;
@@ -19,7 +21,7 @@ header{
 }
 .logo_img{
     height: 64px;
-    margin-left: 8px;
+    margin-left: 16px;
 }
 footer{
     background-color: #151B23;
@@ -40,14 +42,14 @@ footer{
 h1{
     color: white;
     text-align: center;
-    margin: 150px 60px;
-    font-size: 70px;
+    margin: 80px 60px;
+    font-size: 50px;
     font-weight: 800;
 }
 p{
     color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     margin: 0 auto;
 }
 @font-face {
@@ -60,11 +62,12 @@ p{
     display: flex;
     gap: 20px;
     justify-content: center;
-    margin: 60px;
+    margin: 0px 60px;
+    margin-bottom: 60px;
 }
 .single_imgage{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     transition: transform .2s;
     border-radius: 10%;
     cursor: pointer;
