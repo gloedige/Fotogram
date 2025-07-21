@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     background-color: black;
-    font-family: jua;
+    font-family: figtree;
 }
 main{
     flex:1;
@@ -41,11 +41,11 @@ h1{
     text-align: center;
     margin-top: 150px;
     font-size: 70px;
-    font-weight: 100;
+    font-weight: 800;
 }
 @font-face {
-    font-family: jua;
-    src: url("./Font/Jua-Regular.ttf");
+    font-family: figtree;
+    src: url("./Font/Figtree-VariableFont_wght.ttf");
     font-display: fallback;
 }
 .overview_style{
