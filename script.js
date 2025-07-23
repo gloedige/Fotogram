@@ -33,6 +33,12 @@ function openDialog(index){
     dialogRef.innerHTML = assembleDialogElements(singleImgPath); 
 }
 
+function closeDialog(){
+    let dialogRef = document.getElementById('imgDialog');
+    dialogRef.close();
+
+}
+
 // function openOverlay(index){
 //     toggleDNone('overlay');
 //     let overlayContainer = document.getElementById('overlay');
@@ -41,8 +47,8 @@ function openDialog(index){
 // }
 
 function assembleDialogElements(singleImgPath){
-    return `<div>
-                <button>
+    return `<div class="container_dialog">
+                <button onclick="closeDialog()">
                     close
                 </button>
                 <img src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">
