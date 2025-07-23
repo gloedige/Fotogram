@@ -40,11 +40,13 @@ function closeDialog(){
 
 function assembleDialogElements(singleImgPath){
     return `<div class="container_dialog">
-                <button onclick="closeDialog()">
-                    close
-                </button>
+                <div class="container_close_button">
+                    <button onclick="closeDialog()">
+                        close
+                    </button>
+                </div>
                 <img src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">
-                <div>
+                <div class="container_skip_button">
                     <button>
                         backwards
                     </button>
