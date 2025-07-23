@@ -20,6 +20,7 @@ const myImgsArray = ["20250320_121941.jpg_compressed.JPEG",
 "20241008_115304.jpg_compressed.JPEG"];
 
 function createImgOverview(){
+    index = 0;
     for (let index = 0; index < myImgsArray.length; index++) {
         let singleImgPath = assembleImgPath(index);
         imgContainer.innerHTML += `<img src= "${singleImgPath}" class="single_imgage" onclick="openDialog(${index})">`; 
@@ -45,22 +46,30 @@ function assembleDialogElements(singleImgPath, index){
                         close
                     </button>
                 </div>
-                <img id="dialog_img" src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">
+                <img src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">
                 <div class="container_skip_button">
                     <button onclick="skipImgBackwards(${index})">
                         backwards
                     </button>
-                    <button>
+                    <button onclick="skipImgForwards(${index})">
                         forwards
                     </button>
                 </div>
             </div>`;
 }
 
+function skipImgForwards(index){
+    let imgRef = document.getElementById('imgDialog');
+    index = index + 1;
+    let singleImgPath = assembleImgPath(index);
+    imgRef.innerHTML = assembleDialogElements(singleImgPath, index); 
+}
+
 function skipImgBackwards(index){
-    let imgRef = document.getElementById('dialog_img');
-    let singleImgPath = assembleImgPath(index-1);
-    imgRef.outerHTML = `<img id="dialog_img" src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">`;
+    let imgRef = document.getElementById('imgDialog');
+    index = index - 1;
+    let singleImgPath = assembleImgPath(index);
+    imgRef.innerHTML = assembleDialogElements(singleImgPath, index); 
 }
 
 function toggleDNone(id){
