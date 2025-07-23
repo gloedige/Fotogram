@@ -30,7 +30,7 @@ function openDialog(index){
     let dialogRef = document.getElementById('imgDialog');
     dialogRef.showModal();
     let singleImgPath = assembleImgPath(index);
-    dialogRef.innerHTML = assembleDialogElements(singleImgPath); 
+    dialogRef.innerHTML = assembleDialogElements(singleImgPath, index); 
 }
 
 function closeDialog(){
@@ -38,16 +38,16 @@ function closeDialog(){
     dialogRef.close();
 }
 
-function assembleDialogElements(singleImgPath){
+function assembleDialogElements(singleImgPath, index){
     return `<div class="container_dialog">
                 <div class="container_close_button">
                     <button onclick="closeDialog()">
                         close
                     </button>
                 </div>
-                <img src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">
+                <img id="dialog_img" src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">
                 <div class="container_skip_button">
-                    <button>
+                    <button onclick="skipImgBackwards(${index})">
                         backwards
                     </button>
                     <button>
@@ -55,6 +55,12 @@ function assembleDialogElements(singleImgPath){
                     </button>
                 </div>
             </div>`;
+}
+
+function skipImgBackwards(index){
+    let imgRef = document.getElementById('dialog_img');
+    let singleImgPath = assembleImgPath(index-1);
+    imgRef.outerHTML = `<img id="dialog_img" src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">`;
 }
 
 function toggleDNone(id){
