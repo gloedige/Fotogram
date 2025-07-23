@@ -75,7 +75,7 @@ p{
 .single_imgage:hover{
     transform: scale(1.1);
 }
-/* .overlay{
+.overlay{
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -88,14 +88,21 @@ p{
     display: none;
 }
 .overlay_image{
-    max-height: 600px;
-} */
-dialog{
-    height: 50vh;
-    width: 70%;
+    max-height: 800px;
+    border-radius: 20px;
+}
+.container_skip_button{
+    display: flex;
+    justify-content: space-between;
+}
+.container_close_button{
+    display: flex;
+    justify-content: end;
+}
+.dialog_buttons{
+
 }
 .container_dialog{
     display: flex;
     flex-direction: column;
-    height: 50vh;
 }
