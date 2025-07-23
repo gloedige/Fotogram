@@ -94,3 +94,8 @@ dialog{
     height: 50vh;
     width: 70%;
 }
+.container_dialog{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
