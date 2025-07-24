@@ -62,14 +62,24 @@ function assembleDialogElements(singleImgPath, index){
 
 function jumpImgForwards(index){
     let dialogRef = document.getElementById('imgDialog');
-    index = index + 1;
+    if(index==numberOfImg-1){
+        index = 0;
+    }
+    else{
+        index = index + 1;
+    }
     let singleImgPath = assembleImgPath(index);
     dialogRef.innerHTML = assembleDialogElements(singleImgPath, index); 
 }
 
 function jumpImgBackwards(index){
     let dialogRef = document.getElementById('imgDialog');
-    index = index - 1;
+    if(index==0){
+        index = numberOfImg -1;
+    }
+    else{
+        index = index - 1;
+    }
     let singleImgPath = assembleImgPath(index);
     dialogRef.innerHTML = assembleDialogElements(singleImgPath, index); 
 }
