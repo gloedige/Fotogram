@@ -49,6 +49,7 @@ function closeDialog(event){
 function assembleDialogElements(singleImgPath, index){
     return `<div class="container_dialog">
                 <div class="container_close_button">
+                    <p class="img_info">${myImgsArray[index]}</p>
                     <button class="dialog_buttons" id="close_button" onclick="closeDialog(event)">
                         <img class="button_img" src="./logo_img/cancel_50dp.svg" alt="cancle">
                     </button>
