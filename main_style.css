@@ -50,7 +50,6 @@ p{
     color: white;
     text-align: center;
     font-size: 24px;
-    margin: 0 auto;
 }
 @font-face {
     font-family: figtree;
@@ -92,33 +91,36 @@ dialog{
     width: 600px;
     height: 900px;
     padding: 0px;
-    border-radius: 50px;
+    border-radius: 30px;
 }
 dialog::backdrop{
     background-color: rgba(0,0,0,0.375);
 }
 .dialog_image{
     max-height: 700px;
-    border-radius: 20px;
-    margin: 0px 20px;
+    margin: 0px 30px;
+    box-shadow: 10px 10px 30px black;
 }
 .container_switch_button{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin: 20px;
 }
 .container_close_button{
     display: flex;
-    justify-content: end;
-    margin: 20px;
+    justify-content: space-between;
+    margin: 30px;
 }
 .dialog_buttons{
-    background-color: black;
+    background-color: rgb(0, 0, 0, 0.0);
+    justify-content: center;
     cursor: pointer;
+    border-style: none;
 }
 .button_img{
     pointer-events: none;
+    border-radius: 25px;
 }
 .container_dialog{
     display: flex;
