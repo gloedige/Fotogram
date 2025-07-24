@@ -54,7 +54,7 @@ function assembleDialogElements(singleImgPath, index){
                     </button>
                 </div>
                 <img src= "${singleImgPath}" class="dialog_image" alt="enlarged_image">
-                <div class="container_skip_button">
+                <div class="container_switch_button">
                     <button onclick="jumpImgBackwards(${index})">
                         backwards
                     </button>
