@@ -87,8 +87,18 @@ p{
 .d_none{
     display: none;
 }
-.overlay_image{
-    max-height: 800px;
+dialog{
+    position: absolute;
+    width: 600px;
+    height: 900px;
+    /* margin:0px; */
+    /* padding: 0px; */
+}
+dialog::backdrop{
+    background-color: rgba(0,0,0,0.375);
+}
+.dialog_image{
+    max-height: 700px;
     border-radius: 20px;
 }
 .container_skip_button{
