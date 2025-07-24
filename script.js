@@ -19,6 +19,7 @@ const myImgsArray = ["20250320_121941.jpg_compressed.JPEG",
 "20241010_182315.jpg_compressed.JPEG",
 "20241008_115304.jpg_compressed.JPEG"];
 const numberOfImg = myImgsArray.length;
+document.addEventListener('click', closeDialog);
 
 function createImgOverview(){
     index = 0;
@@ -35,19 +36,24 @@ function openDialog(index){
     dialogRef.innerHTML = assembleDialogElements(singleImgPath, index); 
 }
 
-function closeDialog(){
+function closeDialog(event){
     let dialogRef = document.getElementById('imgDialog');
-    dialogRef.close();
+    if(event.target.contains(dialogRef) || event.target.id=="close_button"){
+        dialogRef.close();
+    }
+    else{
+        return;
+    }
 }
 
 function assembleDialogElements(singleImgPath, index){
     return `<div class="container_dialog">
                 <div class="container_close_button">
-                    <button onclick="closeDialog()">
+                    <button id="close_button" onclick="closeDialog(event)">
                         close
                     </button>
                 </div>
-                <img src= "${singleImgPath}" class="overlay_image" alt="enlarged_image">
+                <img src= "${singleImgPath}" class="dialog_image" alt="enlarged_image">
                 <div class="container_skip_button">
                     <button onclick="jumpImgBackwards(${index})">
                         backwards
