@@ -49,18 +49,18 @@ function closeDialog(event){
 function assembleDialogElements(singleImgPath, index){
     return `<div class="container_dialog">
                 <div class="container_close_button">
-                    <button id="close_button" onclick="closeDialog(event)">
-                        close
+                    <button class="dialog_buttons" id="close_button" onclick="closeDialog(event)">
+                        <img class="button_img" src="./logo_img/cancel_50dp.svg" alt="cancle">
                     </button>
                 </div>
                 <img src= "${singleImgPath}" class="dialog_image" alt="enlarged_image">
                 <div class="container_switch_button">
-                    <button onclick="jumpImgBackwards(${index})">
-                        backwards
+                    <button class="dialog_buttons" onclick="jumpImgBackwards(${index})">
+                        <img class="button_img" src="./logo_img/arrow_circle_left_50dp.svg" alt="backwards">
                     </button>
                     <p class="img_info">${index+1} / ${numberOfImg}</p>
-                    <button onclick="jumpImgForwards(${index})">
-                        forwards
+                    <button class="dialog_buttons" onclick="jumpImgForwards(${index})">
+                        <img class="button_img" src="./logo_img/arrow_circle_right_50dp.svg" alt="forwards">
                     </button>
                 </div>
             </div>`;
