@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-color: black;
+    background-image: linear-gradient(360deg, black, rgb(4 42 59));
     font-family: figtree;
 }
 main{
@@ -127,7 +127,7 @@ dialog::backdrop{
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    background-color: rgb(77, 74, 74);
+    background-image: linear-gradient(135deg, rgb(13, 118, 48), rgb(17, 116, 161));
 }
 .img_info{
     color: rgb(255, 255, 255);
