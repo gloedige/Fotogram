@@ -161,7 +161,7 @@ dialog::backdrop{
         margin: 0px clamp(20px, 5vw, 40px)
     }
 }
-@media(max-width: 600px){
+@media(max-width: 600px) or (max-height: 1000px){
     .logo_img{
         height: 32px;
     }
@@ -183,12 +183,12 @@ dialog::backdrop{
         margin: 5px 0px;
     }
     dialog{
-        width: 90vw;
         height: clamp(500px, calc(100vw + 240px), 900px);
     }
     .dialog_image{
-        max-height: 600px;
+        max-height: calc(100vh - 200px);
         margin: 0px 16px;
+        object-fit: contain;
     }
     .container_close_button{
         margin: 15px;
