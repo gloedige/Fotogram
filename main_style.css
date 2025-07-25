@@ -102,6 +102,7 @@ dialog::backdrop{
     max-height: 700px;
     margin: 0px 30px;
     box-shadow: 10px 10px 30px black;
+    object-fit: cover;
 }
 .container_switch_button{
     display: flex;
@@ -113,6 +114,7 @@ dialog::backdrop{
 .container_close_button{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 30px;
     height: 50px;
 }
@@ -136,7 +138,9 @@ dialog::backdrop{
 .img_info{
     color: rgb(255, 255, 255);
     font-size: 16px;
-    width: 60px;
+    flex: 1;
+    word-wrap: break-word;
+    min-width: 100px;
 }
 @media(max-width: 800px){
     .logo_img{
@@ -177,6 +181,20 @@ dialog::backdrop{
     p{
         font-size: 18px;
         margin: 5px 0px;
+    }
+    dialog{
+        width: 90vw;
+        height: clamp(500px, calc(100vw + 240px), 900px);
+    }
+    .dialog_image{
+        max-height: 600px;
+        margin: 0px 16px;
+    }
+    .container_close_button{
+        margin: 15px;
+    }
+    .container_switch_button{
+        margin: 15px;
     }
 }
 @media(max-width: 400px){
