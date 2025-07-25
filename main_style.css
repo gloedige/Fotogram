@@ -37,7 +37,7 @@ footer{
 .container_footer{
     margin: 0 auto;
     max-width: 1440px;
-    padding: 8px 0px;
+    padding: 0px 0px;
 }
 h1{
     color: white;
@@ -50,6 +50,7 @@ p{
     color: white;
     text-align: center;
     font-size: 24px;
+    margin: 16px 0px;
 }
 @font-face {
     font-family: figtree;
@@ -135,4 +136,52 @@ dialog::backdrop{
     color: rgb(255, 255, 255);
     font-size: 16px;
     width: 60px;
+}
+@media(max-width: 800px){
+    .logo_img{
+        height: 48px;
+    }
+    h1{
+        font-size: 32px;
+        margin: clamp(20px, 3vh, 60px) clamp(20px, 5vw, 40px)
+    }
+    header, footer{
+        height: 66px;
+    }
+    .single_imgage{
+        height: 120px;
+        width: 120px;
+    }
+    .overview_style{
+        margin: 0px clamp(20px, 5vw, 40px)
+    }
+}
+@media(max-width: 600px){
+    .logo_img{
+        height: 32px;
+    }
+    h1{
+        font-size: 24px;
+    }
+    header, footer{
+        height: 48px;
+    }
+    .single_imgage{
+        height: 100px;
+        width: 100px;
+    }
+    .overview_style{
+        gap: clamp(10px,3vw,20px);
+    }
+    p{
+        font-size: 18px;
+        margin: 5px 0px;
+    }
+}
+@media(max-width: 400px){
+    .single_imgage{
+        height: 80px;
+        width: 80px;
+    }
+    
 }
