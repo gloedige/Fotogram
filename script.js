@@ -91,10 +91,6 @@ function jumpImgBackwards(index){
     dialogRef.innerHTML = assembleDialogElements(singleImgPath, index); 
 }
 
-function toggleDNone(id){
-    document.getElementById(id).classList.toggle("d_none");
-}
-
 function assembleImgPath(index){
     let singleImg = myImgsArray[index];
     let singleImgPath = rootImgFolder + singleImg;
