@@ -1,6 +1,5 @@
 body{
     margin: 0px;
-    background-image: linear-gradient(360deg, black, rgb(4 42 59));
     font-family: figtree;
 }
 main{
@@ -9,6 +8,7 @@ main{
     flex:1;
     margin: 0 auto;
     max-width: 1440px;
+    background-image: linear-gradient(360deg, black, rgb(4 42 59));
 }
 .wrapper{
     display: flex;
@@ -63,7 +63,7 @@ p{
     gap: 20px;
     justify-content: center;
     margin: 0px 60px;
-    margin-bottom: 60px;
+    padding-bottom: 24px;
 }
 .single_imgage{
     height: 150px;
